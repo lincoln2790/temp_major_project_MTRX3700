@@ -1,0 +1,110 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/linco/OneDrive/Desktop/S2Y3/MTRX3700/Major Project/simulation/modelsim
+vtop_level
+Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z2 !s110 1698370555
+!i10b 1
+!s100 MST9L1;4SOW1mC?aYKg5B3
+I;lz9_A:^3K]nXh7Vf5CN11
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+!s105 top_level_sv_unit
+S1
+R0
+Z4 w1698370278
+8C:/Users/linco/OneDrive/Desktop/S2Y3/MTRX3700/Major Project/top_level.sv
+FC:/Users/linco/OneDrive/Desktop/S2Y3/MTRX3700/Major Project/top_level.sv
+L0 1
+Z5 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z6 !s108 1698370555.000000
+!s107 C:/Users/linco/OneDrive/Desktop/S2Y3/MTRX3700/Major Project/top_level.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/linco/OneDrive/Desktop/S2Y3/MTRX3700/Major Project|C:/Users/linco/OneDrive/Desktop/S2Y3/MTRX3700/Major Project/top_level.sv|
+!i113 1
+Z7 o-sv -work work
+Z8 !s92 -sv -work work {+incdir+C:/Users/linco/OneDrive/Desktop/S2Y3/MTRX3700/Major Project}
+Z9 tCvgOpt 0
+vuart_rx
+R1
+R2
+!i10b 1
+!s100 EIk2CZV<=iITG?Ee>b;N73
+IegOi_0OoY7G2g8a[gz^ZK0
+R3
+!s105 uart_rx_sv_unit
+S1
+R0
+R4
+8C:/Users/linco/OneDrive/Desktop/S2Y3/MTRX3700/Major Project/uart_rx.sv
+FC:/Users/linco/OneDrive/Desktop/S2Y3/MTRX3700/Major Project/uart_rx.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/linco/OneDrive/Desktop/S2Y3/MTRX3700/Major Project/uart_rx.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/linco/OneDrive/Desktop/S2Y3/MTRX3700/Major Project|C:/Users/linco/OneDrive/Desktop/S2Y3/MTRX3700/Major Project/uart_rx.sv|
+!i113 1
+R7
+R8
+R9
+vuart_tb
+R1
+R2
+!i10b 1
+!s100 O09joZ=R7EZkk;ZNTef=B2
+IUiUE`ko4II8ZOgh5II27Z2
+R3
+!s105 uart_tb_sv_unit
+S1
+R0
+R4
+8C:/Users/linco/OneDrive/Desktop/S2Y3/MTRX3700/Major Project/uart_tb.sv
+FC:/Users/linco/OneDrive/Desktop/S2Y3/MTRX3700/Major Project/uart_tb.sv
+L0 2
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/linco/OneDrive/Desktop/S2Y3/MTRX3700/Major Project/uart_tb.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/linco/OneDrive/Desktop/S2Y3/MTRX3700/Major Project|C:/Users/linco/OneDrive/Desktop/S2Y3/MTRX3700/Major Project/uart_tb.sv|
+!i113 1
+R7
+R8
+R9
+vuart_tx
+R1
+R2
+!i10b 1
+!s100 fRnekO<D:cM@eCBG?mGia1
+IV@KJRH:C<RANHAj4haTX40
+R3
+!s105 uart_tx_sv_unit
+S1
+R0
+R4
+8C:/Users/linco/OneDrive/Desktop/S2Y3/MTRX3700/Major Project/uart_tx.sv
+FC:/Users/linco/OneDrive/Desktop/S2Y3/MTRX3700/Major Project/uart_tx.sv
+L0 2
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/linco/OneDrive/Desktop/S2Y3/MTRX3700/Major Project/uart_tx.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/linco/OneDrive/Desktop/S2Y3/MTRX3700/Major Project|C:/Users/linco/OneDrive/Desktop/S2Y3/MTRX3700/Major Project/uart_tx.sv|
+!i113 1
+R7
+R8
+R9

@@ -1,0 +1,44 @@
+module top_level (
+	input  CLOCK_50,
+	input  [17:0] SW,
+	inout  [6:0] EX_IO,     // The DE2-115 has an EXtra GPIO header with 7 general purpose input/output pins!
+	output [17:0] LEDR
+);
+   
+	// FPGA is not transmitting to arduino, tx_valid and tx_ready set to whatever
+	logic tx_valid;         // handshake
+	logic tx_ready;         // handshake
+  
+	logic rx_valid;         // handshake
+	logic rx_ready = 1'b1;  // handshake. We are always ready to receive.
+	
+	logic [7:0] rx_byte;
+
+	uart_tx #(.CLKS_PER_BIT(50_000_000/9600)) uart_tx_u (.clk(CLOCK_50), .ready(tx_ready),.data_to_send(SW[7:0]),.valid(tx_valid),.tx(EX_IO[2])); // Send switch value on GPIO[9].
+	uart_rx #(.CLKS_PER_BIT(50_000_000/9600)) uart_rx_u (.clk(CLOCK_50), .rx(EX_IO[1]), .valid(rx_valid), .ready(rx_ready),.data_received(rx_byte)); // Receive on GPIO[7].
+
+	logic [7:0] count = 0;
+	logic [7:0] LED_bits = 0;
+	always_ff @(posedge CLOCK_50) begin
+		tx_valid <= (tx_valid && !tx_ready);  // tx_valid stays high if uart_rx is not ready yet, else go low (can be overriden to high by case 0x82 below).
+		if (rx_valid & rx_ready) begin        // Handshake: uart_rx has got data for us.
+
+			case(rx_byte)
+				
+				7'b1000001: count <= count + 1; // Increment count if we receive 0x81.
+				7'b1000010: tx_valid <= 1'b1;   // Set tx_valid high if we receive 0x82.
+				7'b0110001: LED_bits <= 1;						  // 0xB1 1011 0001 for 1
+				7'b0110010: LED_bits <= 2;						  // 0xB1 1011 0001 for 1
+				7'b0110011: LED_bits <= 3;						  // 0xB1 1011 0001 for 1
+				7'b0110100: LED_bits <= 4;						  // 0xB1 1011 0001 for 1
+			endcase
+		end
+	end
+	
+//	assign LEDR[7:0] = count; // LEDRs display count;
+	assign LEDR[7:0] = LED_bits[7:0];
+	
+	assign LEDR[10] = 1;
+endmodule
+
+	
